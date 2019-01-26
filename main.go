@@ -4,6 +4,7 @@ import (
 	"os"
 
 	"github.com/davidovich/summon"
+	"github.com/gobuffalo/packr/v2"
 )
 
 /*
@@ -15,5 +16,6 @@ filesystem can be accessed directly
 */
 
 func main() {
-	os.Exit(summon.Main(os.Args))
+	box := packr.New("Box", "./assets")
+	os.Exit(summon.Main(os.Args, box))
 }
