@@ -22,7 +22,7 @@ var _ = func() error {
 	g.DefaultResolver = hgr
 
 	func() {
-		b := packr.New("Box", "./assets")
+		b := packr.New("Summon Box", "../assets")
 		b.SetResolver("bin/packr2.gobin.summon", packr.Pointer{ForwardBox: gk, ForwardPath: "85c3031c50b89b6f8895e52bb5bec52f"})
 		b.SetResolver("text.txt", packr.Pointer{ForwardBox: gk, ForwardPath: "a24a41abb2f5d6e7d1ad3c1f697a1e63"})
 	}()
