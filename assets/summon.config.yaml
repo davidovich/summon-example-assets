@@ -1,0 +1,18 @@
+# this is a sample summon config file
+version: 1
+aliases: {}
+# outputdir: "overridden_dir"
+exec:
+  bash:
+    hello-bash: hello.sh
+  gobin:
+    packr: github.com/gobuffalo/packr/v2/packr2
+    gobin: github.com/myitcv/gobin@v0.0.8
+    gohack: github.com/rogpeppe/gohack
+  python -c:
+    hello: |
+      import sys
+      print(sys.version)
+      if True:
+        print("hello from python!")
+
