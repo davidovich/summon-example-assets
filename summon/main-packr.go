@@ -3,6 +3,6 @@
 
 // You can use the "packr clean" command to clean up this,
 // and any other packr generated files.
-package boxer
+package main
 
-import _ "github.com/davidovich/summon-example-assets/packrd"
+import _ "github.com/davidovich/summon-example-assets/summon/packrd"

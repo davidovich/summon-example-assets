@@ -1,0 +1,1 @@
+module github.com/davidovich/summon-example-assets/summon
