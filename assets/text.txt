@@ -1,1 +1,2 @@
 this is distributable text
+with {{ .Content }}
