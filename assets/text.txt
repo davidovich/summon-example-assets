@@ -1,2 +1,8 @@
 this is distributable text
 with {{ .Content }}
+
+Sprig templating {{ "hello" | upper }}
+
+date: {{ now }}
+
+Home: {{ env "HOME" }}

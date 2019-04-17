@@ -1,14 +1,14 @@
 # this is a sample summon config file
 version: 1
-aliases: {}
+aliases: {"git-version": "bin/version.sh"}
 # outputdir: "overridden_dir"
 exec:
   bash:
     hello-bash: hello.sh
-  gobin:
+  gobin -run:
     packr: github.com/gobuffalo/packr/v2/packr2
     gobin: github.com/myitcv/gobin@v0.0.8
-    gohack: github.com/rogpeppe/gohack
+    gohack: github.com/rogpeppe/gohack@v1.0.2
   python -c:
     hello: |
       import sys

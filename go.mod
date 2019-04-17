@@ -4,19 +4,12 @@ module github.com/davidovich/summon-example-assets
 // as exemplified by the scaffolder. We use this as an aid
 // for summon's development.
 
+replace github.com/davidovich/summon-example-assets/summon v0.0.0 => ./summon
+
 require (
-	github.com/davidovich/summon v0.1.0
-	github.com/gobuffalo/buffalo-plugins v1.13.1 // indirect
-	github.com/gobuffalo/packr/v2 v2.0.7
+	github.com/davidovich/summon v0.3.0 // indirect
+	github.com/gobuffalo/packr/v2 v2.2.0 // indirect
 	github.com/konsorten/go-windows-terminal-sequences v1.0.2 // indirect
-	github.com/kr/pty v1.1.3 // indirect
-	golang.org/x/sys v0.0.0-20190310054646-10058d7d4faa // indirect
-	golang.org/x/text v0.3.1-0.20180807135948-17ff2d5776d2 // indirect
+	golang.org/x/crypto v0.0.0-20190325154230-a5d413f7728c // indirect
+	golang.org/x/sys v0.0.0-20190329044733-9eb1bfa1ce65 // indirect
 )
-
-// for dev:
-// make sure you have summon checked out as a sibling
-replace github.com/davidovich/summon => ../summon
-
-//
-// replace github.com/gobuffalo/packr/v2 => ../github.com/gobuffalo/packr/v2
