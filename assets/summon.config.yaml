@@ -1,4 +1,5 @@
 # this is a sample summon config file
+# see https://github.com/davidovich/summon#configuration
 version: 1
 aliases: {"git-version": "bin/version.sh"}
 # outputdir: "overridden_dir"

@@ -1,11 +1,32 @@
-Summon example data provider repo
-=================================
+Summon Data Provider Repo
+=========================
 
-This repository provides an example to create a [summon](https://github.com/davidovich/summon) data
+This repository hosts a [summon](https://github.com/davidovich/summon) data
 provider.
 
-You install this provider as `summon` and then can use the summon executable to
-summon assets.
+You install this provider as `summon`:
 
-Using go get, you can provision every repo with versioned data, but managed in a
-central fashion.
+```
+go install github.com/davidovich/summon-example-assets/summon
+```
+
+And then use the `summon` executable to summon assets.
+
+Summon `some-asset` like so:
+
+```
+summon some-asset
+```
+
+By default, summon will instantiate the asset in the `.summoned/` directory and return its path. This can be overriden in the `asssets/summon.config.yaml` file or by using the `-o` flag.
+
+Get more help with `summon -h`.
+
+Updating assets
+---------------
+
+1) Make modifications (additions, removals) in the assets/ dir
+2) Invoke `make`
+3) Commit changes
+4) Tag with a semantic version (prefix with `v`)
+5) git push --tags
