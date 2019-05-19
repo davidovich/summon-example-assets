@@ -7,8 +7,8 @@ github.com/Masterminds/sprig v2.18.0+incompatible/go.mod h1:y6hNFY5UBTIWBxnzTeuN
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
-github.com/davidovich/summon v0.5.0 h1:SLtEVZ6EE/Z9kbedQ0W476qLDXOCpwOwXbzyKL0lpLo=
-github.com/davidovich/summon v0.5.0/go.mod h1:gssb1/xgrCgAhThQt0Tn/Q1TLx0WRCWvVbBAoBin2Mk=
+github.com/davidovich/summon v0.6.0 h1:5nuEd9YooaP6ED+m8UY5BxcgmRS/cun2YgU75nG7BiA=
+github.com/davidovich/summon v0.6.0/go.mod h1:gssb1/xgrCgAhThQt0Tn/Q1TLx0WRCWvVbBAoBin2Mk=
 github.com/gobuffalo/attrs v0.0.0-20190224210810-a9411de4debd/go.mod h1:4duuawTqi2wkkpB4ePgWMaai6/Kc6WEz83bhFwpHzj0=
 github.com/gobuffalo/depgen v0.0.0-20190329151759-d478694a28d3/go.mod h1:3STtPUQYuzV0gBVOY3vy6CfMm/ljR4pABfrTeHNLHUY=
 github.com/gobuffalo/envy v1.6.15/go.mod h1:n7DRkBerg/aorDM8kbduw5dN3oXGswK5liaSCx4T5NI=
