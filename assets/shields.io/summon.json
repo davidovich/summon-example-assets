@@ -1,0 +1,8 @@
+{{- $floatCov := .Coverage | float64 -}}
+{{/* see  https://shields.io/ for colors */}}
+{
+    "schemaVersion": 1,
+    "label": "coverage",
+    "message": "{{ .Coverage }}%",
+    "color": "{{- if (ge $floatCov 80.0) }}brightgreen{{ else if (ge $floatCov 70.0) }}yellow{{ else }}red{{ end -}}"
+}
