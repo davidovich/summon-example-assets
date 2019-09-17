@@ -6,26 +6,31 @@ aliases: {"git-version": "bin/version.sh"}
 exec:
   bash:
     hello-bash: hello.sh
+
   gobin -run:
     packr: github.com/gobuffalo/packr/v2/packr2
-    gobin: github.com/myitcv/gobin@v0.0.8
+    gobin: github.com/myitcv/gobin@v0.0.13
     gohack: github.com/rogpeppe/gohack@v1.0.2
-  python -c:
+
+  gobin:
+    update_gopls: golang.org/x/tools/gopls@latest
+
+  python3 -c:
     hello: |
       import sys
       print(sys.version)
       if True:
-        print("hello from python!")
+        print(f"hello from python! args: {sys.argv}")
 
   bash -c:
     # small function to setup a temporary GOPATH compatible godoc server inside docker
-    # see https://github.com/golang/go/issues/2682. This allows serving documentation
+    # see https://github.com/golang/go/issues/26827. This allows serving documentation
     # for a go modules enabled project.
     godoc: |
       function _godoc() {
         [ ! -f "$(pwd)/go.mod" ] && echo "error: go.mod not found" ||
           module=$(awk 'NR==1{print $2}' go.mod) &&
-          docker run --rm -e "GOPATH=/tmp/go" -p 6060:6060 -v $(pwd):/tmp/go/src/$module golang:1.12.6 /bin/bash -c "echo http://localhost:6060/pkg/$module && godoc -http=:6060"
+          docker run --rm -ti -e "GOPATH=/tmp/go" -p 6060:6060 -v $(pwd):/tmp/go/src/$module golang:1.13 /bin/bash -c "GO111MODULE=on go get golang.org/x/tools/cmd/godoc && echo -e \"\nhttp://localhost:6060/pkg/$module\" && \$(go env GOPATH)/bin/godoc -http=:6060"
           unset -f _godoc;
       }
       _godoc
