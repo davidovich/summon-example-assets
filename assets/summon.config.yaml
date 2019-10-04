@@ -35,3 +35,11 @@ exec:
       }
       _godoc
 
+    # kmerge merges a the default kubeconfig with a kubeconfig file passed as argement
+    # https://github.com/kubernetes/kubernetes/issues/46381#issuecomment-461404505
+    kmerge: |
+      function kmerge() {
+        KUBECONFIG=~/.kube/config:$1 kubectl config view --flatten > ~/.kube/mergedkub && mv ~/.kube/mergedkub ~/.kube/config
+      }
+      kmerge
+
