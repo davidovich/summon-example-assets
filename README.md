@@ -6,19 +6,21 @@ provider.
 
 You install this provider as `summon`:
 
-```
-go install github.com/davidovich/summon-example-assets/summon
+```shell
+go install github.com/davidovich/summon-example-assets/summon@latest
 ```
 
 And then use the `summon` executable to summon assets.
 
 Summon `some-asset` like so:
 
-```
+```shell
 summon some-asset
 ```
 
-By default, summon will instantiate the asset in the `.summoned/` directory and return its path. This can be overriden in the `asssets/summon.config.yaml` file or by using the `-o` flag.
+By default, summon will instantiate the asset in the `.summoned/` directory and
+return its path. This can be overriden in the `asssets/summon.config.yaml` file
+or by using the `-o` flag.
 
 Get more help with `summon -h`.
 
