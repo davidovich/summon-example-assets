@@ -1,14 +1,17 @@
 package main
 
 import (
+	"embed"
 	"os"
 
 	"github.com/davidovich/summon"
-	"github.com/gobuffalo/packr/v2"
 )
 
+// capture the files of the assets tree, assuming the assets directory
+// is named "assets".
+//go:embed assets/*
+var fs embed.FS
+
 func main() {
-	// Box captures the files of the assets tree
-	box := packr.New("Summon Box", "../assets")
-	os.Exit(summon.Main(os.Args, box))
+	os.Exit(summon.Main(os.Args, fs))
 }
